@@ -72,6 +72,3 @@ live_loop :beat do
   play :eb4
   sleep 2
 end
-
-
-
