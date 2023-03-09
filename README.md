@@ -1,22 +1,30 @@
+
 # custom song
 use_bpm 131
 
+hi = 21
+z = 0.30
+x = 0.5
+b = :bb4
 
 zelda= "C:/Users/Fredy Mendoza/Documents/Audacity/zelda.wav"
 
-b = :bb4
 
-#sample zelda
-#sleep 30
-
-hi = 21
-
-z = 0.30
+sample zelda
+sleep 30
 
 gas = "C:/Users/Fredy Mendoza/Documents/Audacity/Piano Glissando Sound Effect copyright free sounds royalty free  sounds.wav"
 
-#sample gas
-#sleep 1.5
+sleep 3
+
+sample gas
+sleep 1.5
+
+5.times do
+  play :gb5, amp: x
+  sleep 1
+  x = x + 0.10
+end
 
 live_loop :beat do
   #first beat
@@ -37,7 +45,7 @@ live_loop :beat do
   sleep 2
   
   live_loop :sj do
-    synth :sine, amp: 0.5
+    synth :sine, amp: 0.3
     sleep 0.5
   end
   
@@ -57,7 +65,7 @@ live_loop :beat do
   sleep 2
   
   live_loop :lf do
-    synth :fm, amp: 0.5
+    synth :fm, amp: 0.2
     sleep 1
   end
   
